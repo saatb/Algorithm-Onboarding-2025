@@ -2,8 +2,7 @@
 #include <cv_bridge/cv_bridge.h>
 #include <sensor_msgs/msg/image.hpp>
 
-CameraPublisherNode::CameraPublisherNode()
-: Node("camera_publisher_node"), frame_count(0)
+CameraPublisherNode::CameraPublisherNode() : Node("camera_publisher_node"), frame_count(0)
 {
     cap = std::make_unique<cv::VideoCapture>(videoPath, cv::CAP_FFMPEG);
 

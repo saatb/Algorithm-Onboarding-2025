@@ -23,6 +23,7 @@
 #define LIGHT_BAR_ASPECT_RATIO_LOWER_LIMIT 2.0
 #define LIGHT_BAR_WIDTH_LOWER_LIMIT 2.0
 #define LIGHT_BAR_HEIGHT_LOWER_LIMIT 5.0
+
 #define ARMOR_ANGLE_DIFF_LIMIT 5.0
 #define ARMOR_LIGHT_BAR_ASPECT_RATIO_RATIO_LIMIT 5.0
 #define ARMOR_Y_DIFF_LIMIT 1.5
@@ -35,7 +36,7 @@ cv::Scalar upperHSV(10, 255, 255); // Upper bound of HSV
 cv::Scalar lowerHSV2(170, 120, 70);   // Lower bound of HSV
 cv::Scalar upperHSV2(179, 255, 255); // Upper bound of HSV
 
-class ArmorDetectorNode : /* TODO: Can you find the ROS node base class? We want our class to inherit from it. */ {
+class ArmorDetectorNode : public rclcpp::Node{
     public:
         ArmorDetectorNode();
     private:
